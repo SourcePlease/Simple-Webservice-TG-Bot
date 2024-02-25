@@ -91,7 +91,7 @@ async def main():
     await app.start()
     runner = web.AppRunner(await web_server())
     await runner.setup()
-    site = web.TCPSite(runner, '0.0.0.0', 80)
+    site = web.TCPSite(runner, '0.0.0.0', 8080)
     await site.start()
 
 if __name__ == '__main__':
